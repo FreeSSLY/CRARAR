@@ -1,6 +1,3 @@
-# Welcome to your FREE SSL project
-
-
 
 ## What technologies are used for this project?
 
