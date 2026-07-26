@@ -24,6 +24,7 @@ interface Animal {
   data_adesao: string;
   created_at: string;
   updated_at: string;
+  microchip: string | null;
 }
 
 interface Atendimento {
