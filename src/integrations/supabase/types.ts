@@ -17,6 +17,7 @@ export type Database = {
           data_nascimento: string
           especie: string
           id: string
+          microchip: string | null
           nome: string
           peso: number
           raca: string
@@ -31,6 +32,7 @@ export type Database = {
           data_nascimento: string
           especie: string
           id?: string
+          microchip?: string | null
           nome: string
           peso: number
           raca: string
@@ -45,6 +47,7 @@ export type Database = {
           data_nascimento?: string
           especie?: string
           id?: string
+          microchip?: string | null
           nome?: string
           peso?: number
           raca?: string
