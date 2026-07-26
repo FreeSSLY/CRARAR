@@ -41,6 +41,7 @@ const animalSchema = z.object({
   sexo: z.string().min(1, "Sexo é obrigatório"),
   cor: z.string().min(1, "Cor é obrigatória"),
   peso: z.number().min(0.1, "Peso deve ser maior que 0"),
+  microchip: z.string().max(50).optional(),
 });
 
 type AnimalFormData = z.infer<typeof animalSchema>;
@@ -73,6 +74,7 @@ const AnimalForm = ({ tutores, onSave }: AnimalFormProps) => {
       sexo: "",
       cor: "",
       peso: 0,
+      microchip: "",
     },
   });
 
@@ -368,6 +370,23 @@ const AnimalForm = ({ tutores, onSave }: AnimalFormProps) => {
                     </FormItem>
                   )}
                 />
+
+                <FormField
+    control={form.control}
+    name="microchip"
+    render={({ field }) => (
+      <FormItem>
+        <FormLabel>Microchip</FormLabel>
+        <FormControl>
+          <Input
+            placeholder="Ex: 985141000123456"
+            {...field}
+          />
+        </FormControl>
+        <FormMessage />
+      </FormItem>
+    )}
+  />
               </div>
 
               <Button
